@@ -1,0 +1,55 @@
+<ActionBar>
+    <ActionItem (tap)="openDrawer()">
+        <Image class="sideDrawerButton" src="res://hamburger" class="hamburgerIcon"></Image>
+    </ActionItem>
+
+    <ActionItem position="right">
+        <Image src="res://bundlelogo" class="logo" position="right"></Image>
+    </ActionItem>
+
+    <ActionItem>
+        <Image src="res://search" position="right" class="search" (tap)="onClickSearch()">
+
+        </Image>
+    </ActionItem>
+</ActionBar>
+
+<StackLayout>
+    <SearchBar #txtSearchPhrase hint="Search For Bundle" [text]="searchPhrase" (textChange)="onTextChanged($event)" (submit)="onSubmit($event)"
+        color="white" textFieldBackgroundColor="lightgray" textFieldHintColor="white" visibility="hidden">
+    </SearchBar>
+</StackLayout>
+
+<RadSideDrawer tkToggleNavButton>
+    <StackLayout tkDrawerContent class="sideStackLayout">
+        <StackLayout class="sideTitleStackLayout">
+            <Label text="Navigation Menu"></Label>
+        </StackLayout>
+        <StackLayout class="sideStackLayout">
+            <Label [text]="bdUser?.Email" (tap)="emailSupport()" class="sideLabel"></Label>
+            <Label text="Download Manual" (tap)="downloadManual()" class="sideLabel"></Label>
+            <Label text="Sign out" (tap)="logout()" class="sideLabel2"></Label>
+        </StackLayout>
+    </StackLayout>
+
+    <StackLayout tkMainContent>
+
+        <RadListView #lstBundles [items]="bdUserBundles" class="listview" row="1" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
+            <!-- << angular-listview-pull-to-refresh -->
+            <ng-template tkListItemTemplate let-item="item">
+                <StackLayout orientation="vertical">
+
+                    <AbsoluteLayout>
+                        <Label class="show-bundles" [text]="item?.Title"></Label>
+                        <Label class="show-code" [text]="item.Code"></Label>
+                        <Label class="show-date" [text]="item.Created"></Label>
+                        <Button class="myBundleButton" (tap)="downloadBundle(item)" text="Download"></Button>
+                        <Label class="underline" text="                                                                                                                 ">
+                        </Label>
+                    </AbsoluteLayout>
+
+                </StackLayout>
+            </ng-template>
+        </RadListView>
+    </StackLayout>
+</RadSideDrawer>

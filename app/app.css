@@ -1,0 +1,112 @@
+@import '~nativescript-theme-core/css/core.light.css';
+ActionBar {
+    color: white;
+}
+.myBundleButton{
+    margin-left:70%;
+    background-color:#62A5E2;
+    color:white;
+    font-weight: bold;
+    height: 50;
+    width:110;
+}
+.show-bundles{
+    font-size: 20em;
+    color:black;
+    padding :8 15 30 15;
+}
+.logo{
+    width:1000px;
+    background-size: 1;
+}
+.bundle-title{
+    margin-left:0%;
+    font-weight:bold;
+    margin-top:10;
+}
+.bundle-code{
+    margin-left:50%;
+    margin-top:10;
+    font-weight:bold;
+}
+.bundle-date{
+    margin-top:30;
+}
+.editBundleButton{
+    margin-left:80%;
+    background-color:#62A5E2;
+    color:white;
+    font-weight: bold;
+    font-size: 20em;
+    height: 45;
+    width:45;
+}
+.sideDrawerButton{
+    font-weight:bold;
+    font-size: 20em;
+}
+.search{
+    height:60;
+    width:60;
+}
+.hidden{
+    display:none;
+}
+button {
+    font-size: 15;
+   
+}
+.drawerContentText {
+    font-size: 13;
+    padding: 10;
+}
+.drawerContentButton {
+    margin: 0;
+   
+}
+.sideStackLayout {
+    background-color: white;
+    font-size:20;
+}
+.sideTitleStackLayout {
+    height: 56;
+    font-size:20;
+    text-align: center;
+    vertical-align: center;
+    color:black;
+}
+.sideLabel {
+    font-size:20;
+    padding: 10;
+    color:black;
+}
+.sideLabel2 {
+    font-size:20;
+    padding: 10;
+    color:#62A5E2;
+}
+.sideLightGrayLabel {
+    background-color: white;
+}
+.hamburgerIcon{
+    margin-left: 0;
+}
+.underline{
+    text-decoration: underline;
+    margin-left:10;
+    margin-top:45;
+    color:black;
+    font-size:14;
+}
+.show-code{
+    font-size: 15em;
+    color:black;
+    padding :30 15 30 15;
+    font-style: italic;
+}
+.show-date{
+    font-size: 15em;
+    color:black;
+    padding :30 30 30 80;
+    font-style: italic;
+}
